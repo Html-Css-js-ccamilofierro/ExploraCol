@@ -38,6 +38,16 @@
 
 }
 
+.encabezado__navegacion--elemento a:hover {
+    color: var(--rojo);
+
+}
+
+.encabezado__navegacion--lista a.active {
+    text-decoration: underline; 
+    color:var(--blanco); 
+}
+
 .banner__text {
     position: absolute;
     top: 50%;
@@ -548,11 +558,7 @@ span.material-symbols-outlined {
     background-color: var(--gris-oscuro);
 }
 
-.encabezado__navegacion--lista a.active {
-    text-decoration: underline; 
-    font-weight: bold; 
-    color:var(--blanco); 
-}
+
 
 .footer__container {
     background: var(--negro);
