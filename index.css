@@ -79,7 +79,6 @@ img {
   transform: translateY(-50%);
   color: white;
   z-index: 1;
-  padding: 20px;
   border-radius: 20px;
   max-width: 50%;
 }
@@ -456,7 +455,6 @@ span.material-symbols-outlined {
   line-height: 1.6;
   margin-bottom: 20px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
@@ -468,9 +466,8 @@ span.material-symbols-outlined {
 }
 
 .texto-imagen__imagen img {
-  max-width: 100%; 
-  height: auto; 
-  border-radius: 8px; 
+  max-width: 400px; 
+  object-fit: cover;
 }
 
 .seccion-contenido {
@@ -493,28 +490,25 @@ span.material-symbols-outlined {
 .contenido-imagen {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
 }
 
 /* Publicaciones */
 .publicaciones {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin: 40px 0;
+  
+  display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
 }
 
 .columna {
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 31%;
+    margin-bottom: 20px;
 }
 
 .columna-imagen {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover; 
 }
 
 .columna-titulo {
@@ -537,6 +531,7 @@ amp(0.875rem, 1.5vw, 1rem);
   padding: 40px 0;
   margin-top: -4px;
 }
+
 
 .footer {
   display: flex;
@@ -647,6 +642,8 @@ amp(0.875rem, 1.5vw, 1rem);
     margin-bottom: 10px;
   }
 
+
+
 .busca__categorias {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -661,14 +658,9 @@ amp(0.875rem, 1.5vw, 1rem);
   max-width: 100%;
 }
 
-  .texto-imagen {
-    flex-direction: column;
-  }
-
-  .texto-imagen__texto,
-  .texto-imagen__imagen {
-    width: 100%;
-  }
+.columna {
+  width: 100%;
+}
 
   .pago__condiciones__precios {
     flex-direction: column;
@@ -681,6 +673,12 @@ amp(0.875rem, 1.5vw, 1rem);
 .testimonios__elemento {
     flex: 1 1 100%; /* Cada testimonio ocupará el 100% del ancho */
     margin-bottom: 20px;
+}
+
+.texto-imagen__imagen img {
+  max-width: 250px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .busca__categoria {
@@ -714,6 +712,11 @@ amp(0.875rem, 1.5vw, 1rem);
     font-size: 1.5rem;
   }
 
+  .texto-imagen__imagen img {
+    height: 200px;
+    object-fit: cover;
+  }
+
   .banner__text p {
     font-size: 0.875rem;
   }
@@ -730,10 +733,31 @@ amp(0.875rem, 1.5vw, 1rem);
     flex-basis: 100%;
   }
 
+  .pre-footer__image {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
   .testimonios__autor {
     flex-direction: column;
     align-items: center;
   }
+
+  .contenido-imagen {
+    max-width: 100%;
+    height: 150px; /* Fijamos una altura que la hace rectangular */
+    object-fit: cover;
+  }
+
+  .texto-imagen__imagen img {
+    max-width: 100%;  
+  }
+
+  .texto-imagen {
+    flex-wrap: wrap; 
+  }
+
   .busca__categorias {
     grid-template-columns: repeat(1, 1fr); /* 1 columna en pantallas muy pequeñas */
 }
