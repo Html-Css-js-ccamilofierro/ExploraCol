@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-mx">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,21 +19,30 @@
 
 <body>
     <div id="header-container"></div>
+
+    
     <header class="encabezado__container">
         <div class="encabezado">
-                <a href="index.html" class="encabezado__logo" title="Página principal de ExploraCol">
-                    <img class="encabezado__logo--icono" alt="Logo de ExploraCol, empresa de viajes y turismo" src="./img/Logos/Logo.png" />
-                </a>
+            <a href="index.html" class="encabezado__logo" title="Página principal de ExploraCol">
+                <span class="encabezado__logo--icono"></span>
+            </a>
+            
+            
+            <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <nav class="encabezado__navegacion">
                 <ul class="encabezado__navegacion--lista">
                     <li class="encabezado__navegacion--elemento">
                         <a href="blog.html" aria-label="Enlace al blog de viajes">Blog</a>
                     </li>
                     <li class="encabezado__navegacion--elemento">
-                        <a  href="paquetes.html" aria-label="Enlace a paquetes de viaje">Paquetes de viaje</a>
+                        <a href="paquetes.html" aria-label="Enlace a paquetes de viaje">Paquetes de viaje</a>
                     </li>
                     <li class="encabezado__navegacion--elemento">
-                        <a  href="contacto.html" aria-label="Enlace de contacto para consultas">Contacto</a>
+                        <a href="contacto.html" aria-label="Enlace de contacto para consultas">Contacto</a>
                     </li>
                 </ul>
             </nav>
@@ -178,10 +188,9 @@
             </div>
             <div class="pago__condiciones">
                 <div class="pago__condiciones--descripcion">
-                    <dov class="pago__condiciones--destaque">"¡Pago a plazos de hasta 12 cuotas!"</dov>
+                    <div class="pago__condiciones--destaque">¡Pago a plazos de hasta 12 cuotas!</div>
                     <div class="pago__condiciones--detalles">
-                        ¡ Viaja pagando en hasta 12 cuotas con tarjeta,
-                         al contado en crédito con un descuento del 5% !
+                        ¡ Viaja pagando en hasta 12 cuotas con tarjeta, al contado en crédito con un descuento del 5% !
                     </div>
                 </div>
                 <div class="pago__imagenes">
@@ -199,6 +208,7 @@
                 </div>
             </div>
         </div>
+        
 
         <div class="testimonios">
             <div class="testimonios__titulo">
