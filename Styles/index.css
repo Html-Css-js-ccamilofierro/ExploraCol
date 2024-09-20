@@ -33,7 +33,7 @@ img {
   display: block;
   width: 200px;
   height: 50px;
-  background-image: url('./img/Logos/Logo.png');
+  background-image: url('../Assets/Logos/Logo.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -62,6 +62,12 @@ img {
 .encabezado__navegacion--lista a.active {
   text-decoration: underline; 
   color: var(--blanco); 
+}
+
+.encabezado__navegacion--elemento a.active {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: var(--blanco);
 }
 
 /* Banner */
@@ -178,11 +184,11 @@ img {
 }
 
 .ofertas__cards--cartagena {
-  background-image: url("./img/Ciudades/Cartagena.png");
+  background-image: url("../Assets/Ciudades/Cartagena.png");
 }
 
 .ofertas__cards--medellin {
-  background-image: url("./img/Ciudades/Medellin.png");
+  background-image: url("../Assets/Ciudades/Medellin.png");
 }
 
 .ofertas__card--destino-tipo {
@@ -231,6 +237,8 @@ img {
   text-decoration: none;
   transition: background-color 0.3s ease;
   margin-bottom: 40px;
+  border: none;
+  outline: none;
 }
 
 .destinos__elemento--boton:hover,
@@ -639,7 +647,7 @@ span.material-symbols-outlined {
   }
 
   .encabezado__logo--icono {
-    background-image: url('./img/Logos/Logo-solo.png');
+    background-image: url('../Assets/Logos/Logo-solo.png');
   }
 
   .encabezado__navegacion.active {

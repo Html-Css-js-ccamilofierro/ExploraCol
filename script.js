@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('header-container').innerHTML = data;
             // Una vez que el header está cargado, inicializar la funcionalidad del menú
             initializeMenu();
+
+            highlightActivePage();
         });
 
     // Cargar el footer (si tienes un footer separado)
@@ -64,4 +66,15 @@ function initializeMenu() {
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.setAttribute('aria-label', 'Abrir menú de navegación');
     }
+}
+
+function highlightActivePage() {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll('.encabezado__navegacion--elemento a');
+    
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
 }
