@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Cargar el header
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+            // Una vez que el header está cargado, inicializar la funcionalidad del menú
+            initializeMenu();
+        });
+
+    // Cargar el footer (si tienes un footer separado)
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+});
+
+function initializeMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.encabezado__navegacion');
     const header = document.querySelector('.encabezado__container');
@@ -46,4 +64,4 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.setAttribute('aria-label', 'Abrir menú de navegación');
     }
-});
+}
